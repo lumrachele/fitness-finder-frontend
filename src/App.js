@@ -7,13 +7,13 @@ import Home from './components/Home.js'
 function App() {
   return (
     <div className="App">
-      <Login/>
       <Home/>
     </div>
   );
 }
 
 export default App;
+// <Login/>
 
 // <header className="App-header">
 //   <img src={logo} className="App-logo" alt="logo" />
