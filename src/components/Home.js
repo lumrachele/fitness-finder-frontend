@@ -8,18 +8,18 @@ export default function Home (props){
   // constructor(props){
   //   super(props)
   // }
-  // const [userName, setUsername] = useState('')
+  const [user, setUser] = useState('')
   useEffect(()=>{
     fetch(`${API_URL}/users/1`)
     .then(resp=>resp.json()
-  ).then(user=> console.log(user))
+  ).then(user=> setUser(user.name))
   }, [] //runs only on first render, not on each change
   )
 
 
   return(
     <div>
-      <h1>Home page</h1>
+      <h1>Welcome, {user}</h1>
       <Favorites/>
 
     </div>
