@@ -1,40 +1,39 @@
-import React, {Component} from 'react';
+import React, { useState, Component} from 'react';
 import API_URL from '../constants.js'
 
-export default class Login extends React.Component{
-  state={
-    username: ''
+export default function Login (props){
+  const [username, setUsername] = useState('')
+
+
+  const handleInput = (e)=>{
+    // this.setState({
+    //   username: e.target.value
+    // })
+    setUsername(e.target.value)
+
   }
 
-  handleInput = (e)=>{
-    this.setState({
-      username: e.target.value
-    })
-  }
-
-  handleSubmit = (e)=>{
+  const handleSubmit = (e)=>{
     e.preventDefault()
     console.log(e)
 
   }
-
-  render(){
     return(
       <div>
         <h1>
           Login Page
         </h1>
         <form onSubmit={
-          e=>this.handleSubmit(e)
+          e=>handleSubmit(e)
         }a>
-          <input type="text" onChange={this.handleInput}
+          <input type="text" onChange={handleInput}
           >
           </input>
         </form>
       </div>
 
     )
-  }
+
 
 
 }
