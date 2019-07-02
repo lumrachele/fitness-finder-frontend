@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './stylesheets/App.css';
 import Login from './components/Login.js'
 import Home from './components/Home.js'
 
