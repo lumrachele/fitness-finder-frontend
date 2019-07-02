@@ -17,7 +17,7 @@ export default function Home (props){
 
 
   return(
-    <div>
+    <div className="home">
       <h1>Welcome, {user.name}</h1>
       <Favorites user={user}/>
 

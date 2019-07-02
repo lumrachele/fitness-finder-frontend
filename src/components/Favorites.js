@@ -1,5 +1,6 @@
 import React from 'react'
 import EventCard from './EventCard.js'
+import '../stylesheets/Favorites.css'
 
 
 export default function Favorites(props){
@@ -15,8 +16,6 @@ export default function Favorites(props){
 }
 
 
-
-
   return(
     <div className="favorites-list">
     <h1>Your Favorites</h1>
@@ -27,5 +26,3 @@ export default function Favorites(props){
     </div>
   )
 }
-
-// {favoritesList()}

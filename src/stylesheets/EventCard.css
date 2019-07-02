@@ -1,6 +1,7 @@
 .event{
-  text-align: center;
+  text-align: left;
   border: solid;
   max-height: 300px;
   max-width: 300px;
+  display: inline-block;
 }

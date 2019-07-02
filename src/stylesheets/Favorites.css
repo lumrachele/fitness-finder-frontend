@@ -1,0 +1,7 @@
+.favorites-list{
+  text-align: center;
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  max-width: 30%;
+}
