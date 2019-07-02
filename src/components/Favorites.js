@@ -18,7 +18,8 @@ export default function Favorites(props){
 
 
   return(
-    <div>
+    <div className="favorites-list">
+    <h1>Your Favorites</h1>
       <ul>
       {props.user.favorites ? favoritesList() : null
       }
