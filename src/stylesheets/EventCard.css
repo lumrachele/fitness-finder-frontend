@@ -5,3 +5,7 @@
   max-width: 300px;
   display: inline-block;
 }
+
+#remove{
+  background-color: red;
+}
