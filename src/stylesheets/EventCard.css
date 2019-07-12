@@ -1,9 +1,11 @@
 .event{
   text-align: left;
-  border: solid;
+  border: solid 1px;
   max-height: 300px;
   max-width: 300px;
   display: inline-block;
+  padding: 1em;
+  margin: 1em;
 }
 
 #remove{
