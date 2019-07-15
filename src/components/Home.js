@@ -17,6 +17,11 @@ export default function Home (props){
   }, [] //runs only on first render, not on each change
   )
 
+  const handleChange = function (e){
+    // e.preventDefault()
+    console.log(e.target.value)
+  }
+
 
   return(
     <div id="home">
@@ -29,7 +34,11 @@ export default function Home (props){
       <div>map</div>
       <div id="search">
         <form>
-          <input type='text' placeholder="search for fitness venues..."></input>
+          <input
+          type='text'
+          placeholder="search for fitness venues..."
+          onChange={(e)=>handleChange(e)}
+          ></input>
         </form>
       </div>
 
