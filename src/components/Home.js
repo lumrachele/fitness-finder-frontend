@@ -2,15 +2,19 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/Home.css'
 import Favorites from './Favorites.js'
+import SearchResults from './SearchResults'
 // import Map from './Map.js'
 
 import {API_URL} from '../constants.js'
 
 export default function Home (props){
 
+// setting initial value in state & setter method
   const [user, setUser] = useState('')
   const [input, setInput] = useState('')
+  const [results, setResults] = useState(['crossfit', 'orangetheory', 'rumble'])
 
+// initial fetch; equiv to componentDidMount
   useEffect(()=>{
     fetch(`${API_URL}/users/1`)
     .then(resp=>resp.json())
@@ -18,6 +22,7 @@ export default function Home (props){
   }, [] //runs only on first render, not on each change
   )
 
+// sets input value in state
   const handleChange = function (e){
     // e.preventDefault()
     setInput(e.target.value)
@@ -38,9 +43,9 @@ export default function Home (props){
       }
     }
   }
-  // 
+  // this function should send a req to the Google Search or Google Maps API for all fitness venues
   // const search = function(){
-  //
+  //  fetch(googleAPI/?="{input}")
   // }
 
 
@@ -61,6 +66,8 @@ export default function Home (props){
           onChange={(e)=>handleChange(e)}
           ></input>
         </form>
+
+        <SearchResults results={results}/>
       </div>
 
       <footer><h1>footer</h1></footer>
