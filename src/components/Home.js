@@ -9,6 +9,7 @@ import {API_URL} from '../constants.js'
 export default function Home (props){
 
   const [user, setUser] = useState('')
+  const [input, setInput] = useState('')
 
   useEffect(()=>{
     fetch(`${API_URL}/users/1`)
@@ -19,8 +20,28 @@ export default function Home (props){
 
   const handleChange = function (e){
     // e.preventDefault()
-    console.log(e.target.value)
+    setInput(e.target.value)
   }
+
+// memoization to reduce # of requests to backend
+// to accept a search function that calls to the backend
+  const memoize = function(func){
+    let cache = {}
+    return function(...args){
+      let key = args[0]
+      if (!!cache[key]){
+        return cache[key]
+      }else {
+        let val = func.apply(null, args)
+        cache[key] = val
+        return val
+      }
+    }
+  }
+  // 
+  // const search = function(){
+  //
+  // }
 
 
   return(
