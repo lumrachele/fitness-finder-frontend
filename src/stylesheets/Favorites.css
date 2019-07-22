@@ -5,7 +5,9 @@
   border: solid;
   /* display: flex;
   flex-direction: row; */
-  flex: 1;
+  /* flex: 1; */
   align-items: flex-start;
+  height: 50%;
+  overflow: auto;
   /* make it scrollable */
 }
