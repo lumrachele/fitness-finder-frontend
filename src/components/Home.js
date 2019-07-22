@@ -4,6 +4,7 @@ import '../stylesheets/Home.css'
 import Favorites from './Favorites.js'
 import SearchResults from './SearchResults'
 // import Map from './Map.js'
+import MapContainer from './MapContainer'
 
 import {API_URL} from '../constants.js'
 
@@ -57,7 +58,9 @@ export default function Home (props){
       </header>
 
       <Favorites user={user}/>
-      <div>map</div>
+
+        <MapContainer/>
+
       <div id="search">
         <form>
           <input
