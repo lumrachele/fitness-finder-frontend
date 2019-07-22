@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
-
+import '../stylesheets/MapContainer.css'
+//
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  height: '40%',
+  width: '40%'
 };
+
 
 export class MapContainer extends Component {
   render() {
     return (
+      <div id='map'>
       <Map
         google={this.props.google}
         zoom={14}
@@ -18,6 +21,7 @@ export class MapContainer extends Component {
          lng: 36.8233
         }}
       />
+      </div>
     );
   }
 }

@@ -59,8 +59,9 @@ export default function Home (props){
 
       <Favorites user={user}/>
 
-        <MapContainer/>
 
+        <MapContainer/>
+      
       <div id="search">
         <form>
           <input

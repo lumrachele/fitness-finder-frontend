@@ -5,5 +5,7 @@
   border: solid;
   /* display: flex;
   flex-direction: row; */
+  flex: 1;
+  align-items: flex-start;
   /* make it scrollable */
 }
