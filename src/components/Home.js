@@ -2,9 +2,10 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/Home.css'
 import Favorites from './Favorites.js'
-import SearchResults from './SearchResults'
-// import Map from './Map.js'
-import MapContainer from './MapContainer'
+import SearchResults from './SearchResults.js'
+
+import MapContainer from './MapContainer.js'
+import SideNav from './SideNav.js'
 
 import {API_URL} from '../constants.js'
 
@@ -50,18 +51,20 @@ export default function Home (props){
   // }
 
 
-  return(
+  return(<>
+    <SideNav />
     <div id="home">
       <header>
       <h1>Welcome, {user.name}</h1>
 
       </header>
 
+
       <Favorites user={user}/>
 
 
         <MapContainer/>
-      
+
       <div id="search">
         <form>
           <input
@@ -76,6 +79,7 @@ export default function Home (props){
 
       <footer><h1>footer</h1></footer>
     </div>
+    </>
   )
 }
 

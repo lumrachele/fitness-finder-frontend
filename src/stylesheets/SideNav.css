@@ -1,0 +1,9 @@
+#side-nav{
+  z-index: 10;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  color: white;
+}

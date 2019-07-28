@@ -6,9 +6,9 @@ export default function SearchResults (props){
 
   return(
     <div id="results">
-  
+
     {props.results.map(r=>{
-      return(<div key={r.id} className="result-card" id={r.id}>{r}</div>)
+      return(<div key={r.id} className="result-card" >{r}</div>)
     })}
 
     </div>
