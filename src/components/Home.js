@@ -49,17 +49,10 @@ export default function Home (props){
     <div id="home">
       <header>
       <h1>Welcome, {user.name}</h1>
-
       </header>
-
-
       <Favorites user={user}/>
-
-
-        <MapContainer/>
-
+      <MapContainer/>
       <SearchBar/>
-
       <footer><h1>footer</h1></footer>
     </div>
     </>

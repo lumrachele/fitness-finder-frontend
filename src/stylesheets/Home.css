@@ -1,5 +1,6 @@
 #home{
   display: grid;
+  align-items: flex-start;
   grid-auto-columns: 30% 38% 30%;
   /* grid-template-rows: repeat(3, 100%); */
 

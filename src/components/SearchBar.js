@@ -23,14 +23,14 @@ export default function SearchBar(props){
 
   return(
     <div id="search">
-      <form>
-        <input
-        type='text'
-        placeholder="search for fitness venues..."
-        onChange={(e)=>handleChange(e)}
-        onKeyUp={(e)=>{handleSearch(e)}}
-        ></input>
-      </form>
+    <form>
+      <input
+      type='text'
+      placeholder="search for fitness venues..."
+      onChange={(e)=>handleChange(e)}
+      onKeyUp={(e)=>{handleSearch(e)}}
+      ></input>
+    </form>
 
       <SearchResults results={results}/>
     </div>

@@ -1,5 +1,5 @@
 .favorites-list{
-  display: block;
+  display: inline-block;
   position: inherit;
   /* text-align: center; */
   border: solid;
