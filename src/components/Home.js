@@ -2,8 +2,8 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/Home.css'
 import Favorites from './Favorites.js'
-import SearchResults from './SearchResults.js'
-
+import SearchBar from './SearchBar.js'
+// import SearchResults from './SearchResults.js'
 import MapContainer from './MapContainer.js'
 import SideNav from './SideNav.js'
 
@@ -13,8 +13,6 @@ export default function Home (props){
 
 // setting initial value in state & setter method
   const [user, setUser] = useState('')
-  const [input, setInput] = useState('')
-  const [results, setResults] = useState(['crossfit', 'orangetheory', 'rumble'])
 
 // initial fetch; equiv to componentDidMount
   useEffect(()=>{
@@ -24,11 +22,6 @@ export default function Home (props){
   }, [] //runs only on first render, not on each change
   )
 
-// sets input value in state
-  const handleChange = function (e){
-    // e.preventDefault()
-    setInput(e.target.value)
-  }
 
 // memoization to reduce # of requests to backend
 // to accept a search function that calls to the backend
@@ -65,17 +58,7 @@ export default function Home (props){
 
         <MapContainer/>
 
-      <div id="search">
-        <form>
-          <input
-          type='text'
-          placeholder="search for fitness venues..."
-          onChange={(e)=>handleChange(e)}
-          ></input>
-        </form>
-
-        <SearchResults results={results}/>
-      </div>
+      <SearchBar/>
 
       <footer><h1>footer</h1></footer>
     </div>
