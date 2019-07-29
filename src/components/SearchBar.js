@@ -24,7 +24,9 @@ export default function SearchBar(props){
       // setTimeout(()=>{console.log("hit search")}, 3000)
       //otherwise, render some loading animation
 
-      // fetch(``)
+      // fetch(`${SEARCH_URL/input}`)
+      // .then(r=>r.json())
+      // .then(r=> setResults(r))
     }
 
 
