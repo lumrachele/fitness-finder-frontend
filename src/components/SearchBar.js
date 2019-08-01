@@ -27,6 +27,10 @@ export default function SearchBar(props){
       // fetch(`${SEARCH_URL/input}`)
       // .then(r=>r.json())
       // .then(r=> setResults(r))
+      fetch(`http://localhost:3000/api/v1/events`)
+      .then(r=>r.json())
+      // .then(r=>console.log(r))
+      .then(r=> setResults(r))
     }
 
 
