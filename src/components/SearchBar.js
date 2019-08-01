@@ -34,10 +34,13 @@ export default function SearchBar(props){
     }
 
     const filterResults = function(res){
-      res.filter(res=> res.includes?(input))
+      if(input){
+          res.filter(res=> res.includes(input))
+      }else{
+        //fetch all results
+      }
+
     }
-
-
 
   return(
     <div id="search">

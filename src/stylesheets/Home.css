@@ -1,12 +1,20 @@
 #home{
   display: grid;
   align-items: baseline;
-  grid-auto-columns: 30% 38% 30%;
+  grid-auto-columns: 1fr 1fr 1fr;
   /* grid-template-rows: repeat(3, 100%); */
 
   grid-gap: 1em;
   margin-left: 3em;
   margin-right: 3em;
+}
+
+@media (max-width : 320px){
+  #home{
+    display: grid;
+    align-items: baseline;
+    grid-auto-columns: 1fr;
+  }
 }
 
 
