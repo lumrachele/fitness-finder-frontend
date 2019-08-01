@@ -39,7 +39,19 @@ export default function SearchBar(props){
       }else{
         //fetch all results
       }
+    }
 
+    // set this function as keyup handler, wrapping the handleSearch function
+    const debounce = function(wait){
+      let timeout;
+      //set timeout to execute search after 3 seconds of keyup
+      //if 3 seconds have passed, run search
+      if(wait===3){
+        // setTimeout(handleSearch, wait)
+        // clearTimeout(timeout)
+      }else{
+        //render loading animation
+      }
     }
 
   return(
