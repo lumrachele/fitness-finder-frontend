@@ -33,6 +33,10 @@ export default function SearchBar(props){
       .then(r=> setResults(r))
     }
 
+    const filterResults = function(res){
+      res.filter(res=> res.includes?(input))
+    }
+
 
 
   return(
